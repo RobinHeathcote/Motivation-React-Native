@@ -9,6 +9,8 @@ import {
   View
 } from 'react-native';
 
+import LoginPage from './LoginPage'
+
 class Motivation extends Component {
   render() {
     return (
