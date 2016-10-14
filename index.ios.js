@@ -9,28 +9,25 @@ import {
   View
 } from 'react-native';
 
-import LoginPage from './LoginPage'
+var LoginPage = require('./LoginPage');
 
-class Motivation extends Component {
+class MotivationApp extends Component {
   render() {
     return (
       <NavigatorIOS
         style={styles.container}
         initialRoute={{
-          title: 'Property Finder',
+          title: 'Motivation',
           component: LoginPage,
       }}/>
     );
   }
 }
 
-const styles = StyleSheet.create({
+var styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    flex: 1
   }
 });
 
-AppRegistry.registerComponent('Motivation', () => Motivation);
+AppRegistry.registerComponent('Motivation', function() {return MotivationApp});
